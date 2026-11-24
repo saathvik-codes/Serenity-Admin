@@ -108,7 +108,7 @@ export default function Dashboard() {
 
   if (activeTab === 'users') {
     return (
-      <div className="flex min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
+      <div className="flex min-h-screen bg-background">
         <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
         <div className="flex-1">
           <UserManagement users={allUsers} onRefresh={loadDashboardData} />
@@ -119,7 +119,7 @@ export default function Dashboard() {
 
   if (activeTab === 'community') {
     return (
-      <div className="flex min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
+      <div className="flex min-h-screen bg-background">
         <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
         <div className="flex-1">
           <CommunityModeration />
@@ -130,7 +130,7 @@ export default function Dashboard() {
 
   if (activeTab === 'analytics') {
     return (
-      <div className="flex min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
+      <div className="flex min-h-screen bg-background">
         <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
         <div className="flex-1">
           <Analytics />
@@ -141,7 +141,7 @@ export default function Dashboard() {
 
   if (loading) {
     return (
-      <div className="flex min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
+      <div className="flex min-h-screen bg-background">
         <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
@@ -154,7 +154,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50">
+    <div className="flex min-h-screen bg-background">
       <Sidebar activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Main Content */}
@@ -162,7 +162,7 @@ export default function Dashboard() {
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {/* Total Users */}
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
                 <Users className="w-6 h-6 text-purple-600" />
@@ -174,7 +174,7 @@ export default function Dashboard() {
           </div>
 
           {/* Active Users */}
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
                 <Activity className="w-6 h-6 text-green-600" />
@@ -186,7 +186,7 @@ export default function Dashboard() {
           </div>
 
           {/* Discussions */}
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                 <MessageSquare className="w-6 h-6 text-blue-600" />
@@ -198,7 +198,7 @@ export default function Dashboard() {
           </div>
 
           {/* Support Groups */}
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
             <div className="flex items-center justify-between mb-4">
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
                 <Heart className="w-6 h-6 text-indigo-600" />
@@ -211,7 +211,7 @@ export default function Dashboard() {
         </div>
 
         {/* All Users Table */}
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="px-4 sm:px-6 py-4 border-b border-gray-200">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
               <h2 className="text-lg sm:text-xl font-bold text-gray-900 flex items-center gap-2">
@@ -259,7 +259,7 @@ export default function Dashboard() {
                     <tr key={user.id} className="hover:bg-gray-50 transition">
                       <td className="px-6 py-4 whitespace-nowrap">
                         <div className="flex items-center">
-                          <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-full flex items-center justify-center text-white font-semibold">
+                          <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold bg-primary">
                             {user.name?.charAt(0).toUpperCase() || 'U'}
                           </div>
                           <div className="ml-4">

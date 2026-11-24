@@ -208,7 +208,7 @@ export default function Analytics() {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-8">
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Total Assessments</span>
             <Brain className="w-5 h-5 text-purple-600" />
@@ -217,7 +217,7 @@ export default function Analytics() {
           <p className="text-xs text-gray-500 mt-1">Avg Score: {avgAssessmentScore}</p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">AI Conversations</span>
             <MessageCircle className="w-5 h-5 text-blue-600" />
@@ -226,7 +226,7 @@ export default function Analytics() {
           <p className="text-xs text-gray-500 mt-1">Recent chats</p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Journal Entries</span>
             <FileText className="w-5 h-5 text-green-600" />
@@ -235,7 +235,7 @@ export default function Analytics() {
           <p className="text-xs text-gray-500 mt-1">User reflections</p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Active Goals</span>
             <TrendingUp className="w-5 h-5 text-orange-600" />
@@ -246,7 +246,7 @@ export default function Analytics() {
       </div>
 
       {/* Tabs */}
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200">
         <div className="border-b border-gray-200">
           <div className="flex overflow-x-auto">
             <button

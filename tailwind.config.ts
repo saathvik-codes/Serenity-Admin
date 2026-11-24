@@ -8,7 +8,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: { sans: ["Instrument Sans", "system-ui", "sans-serif"], display: ["Fraunces", "Georgia", "serif"] },
       colors: {
+        // brand-remap
+        purple: {"50": "#f3f6f3", "100": "#e4ebe5", "200": "#c9d7cc", "300": "#a5bcaa", "400": "#7f9d86", "500": "#5d7a66", "600": "#4d6655", "700": "#3f5446", "800": "#33443a", "900": "#2a3830"},
+        indigo: {"50": "#f3f6f3", "100": "#e4ebe5", "200": "#c9d7cc", "300": "#a5bcaa", "400": "#7f9d86", "500": "#5d7a66", "600": "#4d6655", "700": "#3f5446", "800": "#33443a", "900": "#2a3830"},
+        violet: {"50": "#f3f6f3", "100": "#e4ebe5", "200": "#c9d7cc", "300": "#a5bcaa", "400": "#7f9d86", "500": "#5d7a66", "600": "#4d6655", "700": "#3f5446", "800": "#33443a", "900": "#2a3830"},
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

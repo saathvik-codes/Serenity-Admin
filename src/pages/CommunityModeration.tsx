@@ -120,7 +120,7 @@ export default function CommunityModeration() {
 
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Total Discussions</span>
             <MessageSquare className="w-5 h-5 text-blue-600" />
@@ -128,7 +128,7 @@ export default function CommunityModeration() {
           <p className="text-3xl font-bold text-gray-900">{discussions.length}</p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Support Groups</span>
             <Heart className="w-5 h-5 text-pink-600" />
@@ -136,7 +136,7 @@ export default function CommunityModeration() {
           <p className="text-3xl font-bold text-gray-900">{supportGroups.length}</p>
         </div>
 
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Total Members</span>
             <Users className="w-5 h-5 text-green-600" />
@@ -148,7 +148,7 @@ export default function CommunityModeration() {
       </div>
 
       {/* Tabs */}
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 mb-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 mb-6">
         <div className="border-b border-gray-200">
           <div className="flex">
             <button
@@ -306,7 +306,7 @@ export default function CommunityModeration() {
       {/* Details Modal */}
       {selectedItem && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto">
+          <div className="bg-white rounded-xl shadow-sm max-w-2xl w-full max-h-[90vh] overflow-auto">
             <div className="p-6 border-b border-gray-200">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-gray-900">

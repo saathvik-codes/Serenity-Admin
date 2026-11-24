@@ -81,7 +81,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
 
       {/* Stats Cards */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-6 sm:mb-8">
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Total Users</span>
             <Shield className="w-5 h-5 text-purple-600" />
@@ -89,7 +89,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
           <p className="text-3xl font-bold text-gray-900">{users.length}</p>
         </div>
         
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Verified</span>
             <CheckCircle className="w-5 h-5 text-green-600" />
@@ -99,7 +99,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
           </p>
         </div>
         
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Unverified</span>
             <XCircle className="w-5 h-5 text-orange-600" />
@@ -109,7 +109,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
           </p>
         </div>
         
-        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+        <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Active Streaks</span>
             <TrendingUp className="w-5 h-5 text-blue-600" />
@@ -121,7 +121,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
       </div>
 
       {/* Filters and Actions */}
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-4 sm:p-6 mb-6">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4 sm:p-6 mb-6">
         <div className="flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
           <div className="flex-1 min-w-full sm:min-w-[300px]">
             <div className="relative">
@@ -160,7 +160,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
       </div>
 
       {/* Users Table */}
-      <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead className="bg-gray-50">
@@ -190,7 +190,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
                 <tr key={user.id} className="hover:bg-gray-50 transition">
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-full flex items-center justify-center text-white font-semibold">
+                      <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold bg-primary">
                         {user.name?.charAt(0).toUpperCase() || 'U'}
                       </div>
                       <div className="ml-4">
@@ -247,7 +247,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
       {/* User Details Modal */}
       {selectedUser && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-auto">
+          <div className="bg-white rounded-xl shadow-sm max-w-2xl w-full max-h-[90vh] overflow-auto">
             <div className="p-6 border-b border-gray-200">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-gray-900">User Details</h2>
@@ -262,7 +262,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
             
             <div className="p-6 space-y-6">
               <div className="flex items-center gap-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-indigo-400 rounded-full flex items-center justify-center text-white text-3xl font-semibold">
+                <div className="w-20 h-20 rounded-full flex items-center justify-center text-white text-3xl font-semibold bg-primary">
                   {selectedUser.name?.charAt(0).toUpperCase() || 'U'}
                 </div>
                 <div>
