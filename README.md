@@ -4,12 +4,12 @@ Admin dashboard for managing Serenity Mental Health Wellness App.
 
 ## Features
 
-- 🔐 Admin-only authentication
-- 👥 User management
-- 📊 Analytics and statistics
-- 💬 Community moderation
-- 📝 Content management
-- 🆘 Emergency support monitoring
+- Admin-only authentication
+- User management
+- Analytics and statistics
+- Community moderation
+- Content management
+- Emergency support monitoring
 
 ## Setup
 
