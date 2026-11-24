@@ -224,8 +224,8 @@ export default function CommunityModeration() {
               </div>
             ) : (
               <div className="text-center py-12">
-                <AlertCircle className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">No discussions found</p>
+                <img src="/illustrations/sa-empty-discussions.webp" alt="" width={240} height={171} loading="lazy" className="mx-auto mb-4 h-auto w-48" />
+                <p className="text-muted-foreground">No discussions yet</p>
               </div>
             )}
           </div>
@@ -295,8 +295,8 @@ export default function CommunityModeration() {
               </div>
             ) : (
               <div className="text-center py-12">
-                <AlertCircle className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">No support groups found</p>
+                <img src="/illustrations/sa-empty-groups.webp" alt="" width={240} height={171} loading="lazy" className="mx-auto mb-4 h-auto w-48" />
+                <p className="text-muted-foreground">No support groups yet</p>
               </div>
             )}
           </div>
