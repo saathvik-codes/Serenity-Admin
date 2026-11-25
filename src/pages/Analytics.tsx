@@ -211,7 +211,7 @@ export default function Analytics() {
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Total Assessments</span>
-            <Brain className="w-5 h-5 text-purple-600" />
+            <Brain className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">{assessments.length}</p>
           <p className="text-xs text-gray-500 mt-1">Avg Score: {avgAssessmentScore}</p>
@@ -220,7 +220,7 @@ export default function Analytics() {
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">AI Conversations</span>
-            <MessageCircle className="w-5 h-5 text-blue-600" />
+            <MessageCircle className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">{aiChats.length}</p>
           <p className="text-xs text-gray-500 mt-1">Recent chats</p>
@@ -229,7 +229,7 @@ export default function Analytics() {
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Journal Entries</span>
-            <FileText className="w-5 h-5 text-green-600" />
+            <FileText className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">{journalEntries.length}</p>
           <p className="text-xs text-gray-500 mt-1">User reflections</p>
@@ -238,7 +238,7 @@ export default function Analytics() {
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Active Goals</span>
-            <TrendingUp className="w-5 h-5 text-orange-600" />
+            <TrendingUp className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">{goals.length}</p>
           <p className="text-xs text-gray-500 mt-1">Avg Progress: {avgGoalProgress}%</p>
@@ -384,7 +384,7 @@ export default function Analytics() {
                       <td className="px-4 py-3 text-sm text-gray-900">{entry.userName || 'Unknown'}</td>
                       <td className="px-4 py-3 text-sm text-gray-900">{entry.title}</td>
                       <td className="px-4 py-3 text-sm">
-                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded text-xs">
+                        <span className="text-xs font-medium text-primary">
                           {entry.mood}
                         </span>
                       </td>
@@ -419,7 +419,7 @@ export default function Analytics() {
                       <td className="px-4 py-3 text-sm text-gray-900">{goal.userName || 'Unknown'}</td>
                       <td className="px-4 py-3 text-sm text-gray-900">{goal.title}</td>
                       <td className="px-4 py-3 text-sm">
-                        <span className="px-2 py-1 bg-orange-100 text-orange-700 rounded text-xs">
+                        <span className="text-xs font-medium text-accent">
                           {goal.category}
                         </span>
                       </td>

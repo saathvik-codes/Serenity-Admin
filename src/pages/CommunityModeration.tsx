@@ -123,7 +123,7 @@ export default function CommunityModeration() {
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Total Discussions</span>
-            <MessageSquare className="w-5 h-5 text-blue-600" />
+            <MessageSquare className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">{discussions.length}</p>
         </div>
@@ -131,7 +131,7 @@ export default function CommunityModeration() {
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Support Groups</span>
-            <Heart className="w-5 h-5 text-pink-600" />
+            <Heart className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">{supportGroups.length}</p>
         </div>
@@ -139,7 +139,7 @@ export default function CommunityModeration() {
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Total Members</span>
-            <Users className="w-5 h-5 text-green-600" />
+            <Users className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">
             {supportGroups.reduce((sum, g) => sum + (g.memberCount || 0), 0)}

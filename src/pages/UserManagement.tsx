@@ -84,7 +84,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Total Users</span>
-            <Shield className="w-5 h-5 text-purple-600" />
+            <Shield className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">{users.length}</p>
         </div>
@@ -92,7 +92,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Verified</span>
-            <CheckCircle className="w-5 h-5 text-green-600" />
+            <CheckCircle className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">
             {users.filter(u => u.emailVerified).length}
@@ -102,7 +102,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Unverified</span>
-            <XCircle className="w-5 h-5 text-orange-600" />
+            <XCircle className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">
             {users.filter(u => !u.emailVerified).length}
@@ -112,7 +112,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
         <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm text-gray-600">Active Streaks</span>
-            <TrendingUp className="w-5 h-5 text-blue-600" />
+            <TrendingUp className="w-5 h-5 text-primary" />
           </div>
           <p className="text-3xl font-bold text-gray-900">
             {users.filter(u => u.streak > 0).length}
@@ -201,12 +201,12 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     {user.emailVerified ? (
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                      <span className="items-center gap-1 text-xs font-medium text-primary">
                         <CheckCircle className="w-3 h-3" />
                         Verified
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
+                      <span className="items-center gap-1 text-xs font-medium text-accent">
                         <XCircle className="w-3 h-3" />
                         Unverified
                       </span>
@@ -219,7 +219,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
                     </div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                    <span className="text-xs font-semibold font-medium text-foreground">
                       {user.streak || 0} days
                     </span>
                   </td>
@@ -278,7 +278,7 @@ export default function UserManagement({ users, onRefresh }: UserManagementProps
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-sm text-gray-600 mb-1">Current Streak</p>
-                  <p className="text-2xl font-bold text-gray-900">{selectedUser.streak || 0} days</p>
+                  <p className="text-2xl font-bold text-gray-900">{selectedUser.streak || 0} {(selectedUser.streak || 0) === 1 ? "day" : "days"}</p>
                 </div>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-sm text-gray-600 mb-1">Email Status</p>

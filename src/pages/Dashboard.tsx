@@ -159,55 +159,22 @@ export default function Dashboard() {
 
       {/* Main Content */}
       <main className="flex-1 p-4 sm:p-6 lg:p-8 overflow-auto">
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {/* Total Users */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <Users className="w-6 h-6 text-purple-600" />
+        {/* Stats */}
+        <div className="mb-8 grid grid-cols-2 divide-x divide-y divide-border overflow-hidden rounded-xl border border-border bg-card lg:grid-cols-4 lg:divide-y-0">
+          {[
+            { label: 'Registered users', value: stats.totalUsers, icon: Users },
+            { label: 'Active users', value: stats.activeUsers, icon: Activity },
+            { label: 'Discussions', value: stats.totalDiscussions, icon: MessageSquare },
+            { label: 'Support groups', value: stats.totalSupportGroups, icon: Heart },
+          ].map(({ label, value, icon: Icon }) => (
+            <div key={label} className="p-6">
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Icon className="h-4 w-4 text-primary" aria-hidden="true" />
+                {label}
               </div>
-              <span className="text-sm text-gray-500">Total</span>
+              <p className="mt-3 font-display text-4xl font-semibold text-foreground">{Number(value || 0).toLocaleString()}</p>
             </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-1">{stats.totalUsers}</h3>
-            <p className="text-sm text-gray-600">Registered Users</p>
-          </div>
-
-          {/* Active Users */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                <Activity className="w-6 h-6 text-green-600" />
-              </div>
-              <span className="text-sm text-gray-500">Active</span>
-            </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-1">{stats.activeUsers}</h3>
-            <p className="text-sm text-gray-600">Active Users</p>
-          </div>
-
-          {/* Discussions */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <MessageSquare className="w-6 h-6 text-blue-600" />
-              </div>
-              <span className="text-sm text-gray-500">Community</span>
-            </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-1">{stats.totalDiscussions}</h3>
-            <p className="text-sm text-gray-600">Discussions</p>
-          </div>
-
-          {/* Support Groups */}
-          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-200">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center">
-                <Heart className="w-6 h-6 text-indigo-600" />
-              </div>
-              <span className="text-sm text-gray-500">Support</span>
-            </div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-1">{stats.totalSupportGroups}</h3>
-            <p className="text-sm text-gray-600">Support Groups</p>
-          </div>
+          ))}
         </div>
 
         {/* All Users Table */}
@@ -277,9 +244,7 @@ export default function Dashboard() {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <span className="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                          {user.streak || 0} days
-                        </span>
+                        <span className="text-sm text-foreground">{user.streak || 0} {(user.streak || 0) === 1 ? "day" : "days"}</span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         <div className="flex items-center gap-1">

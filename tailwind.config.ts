@@ -8,9 +8,22 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: { sans: ["Instrument Sans", "system-ui", "sans-serif"], display: ["Fraunces", "Georgia", "serif"] },
+      fontFamily: { sans: ["Public Sans", "system-ui", "sans-serif"], display: ["Lora", "Georgia", "serif"] },
       colors: {
         // brand-remap
+        // warm-grey
+        gray: {
+          "50": "#faf8f4",
+          "100": "#f3efe8",
+          "200": "#e6e0d5",
+          "300": "#d0c9bb",
+          "400": "#a39c8e",
+          "500": "#7a746a",
+          "600": "#5c574f",
+          "700": "#44403a",
+          "800": "#2d2a26",
+          "900": "#1f1d1a",
+        },
         purple: {"50": "#f3f6f3", "100": "#e4ebe5", "200": "#c9d7cc", "300": "#a5bcaa", "400": "#7f9d86", "500": "#5d7a66", "600": "#4d6655", "700": "#3f5446", "800": "#33443a", "900": "#2a3830"},
         indigo: {"50": "#f3f6f3", "100": "#e4ebe5", "200": "#c9d7cc", "300": "#a5bcaa", "400": "#7f9d86", "500": "#5d7a66", "600": "#4d6655", "700": "#3f5446", "800": "#33443a", "900": "#2a3830"},
         violet: {"50": "#f3f6f3", "100": "#e4ebe5", "200": "#c9d7cc", "300": "#a5bcaa", "400": "#7f9d86", "500": "#5d7a66", "600": "#4d6655", "700": "#3f5446", "800": "#33443a", "900": "#2a3830"},

@@ -56,10 +56,10 @@ export default function Sidebar({ activeTab, onTabChange }: SidebarProps) {
               <li key={item.id}>
                 <button
                   onClick={() => onTabChange(item.id)}
-                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition${
+                  className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
                     isActive
-                      ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg'
-                      : 'text-gray-700 hover:bg-gray-100'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'text-foreground/70 hover:bg-secondary hover:text-foreground'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
